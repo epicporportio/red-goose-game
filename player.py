@@ -19,9 +19,9 @@ class Goose(pygame.sprite.Sprite):
     
     # updates the player
     def update(self, window):
-        self.image = pygame.transform.rotate(self.image, round(degrees(self.goose_hitbox.angle)))
+        self.new_image = pygame.transform.rotate(self.image, round(degrees(self.goose_hitbox.angle)))
         print(round(degrees(self.goose_hitbox.angle)))
-        window.blit(self.image, (self.x, self.y))
+        window.blit(self.new_image, (self.x, self.y))
         # pygame.Surface.blit(self.image, window)
         # pygame.draw.rect(window, (0, 0, 255), (self.x, self.y, self.width, self.height))
         pymunk_is_gay_x = self.goose_hitbox.position[0]
