@@ -33,7 +33,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     window.fill((0, 0, 0))
-    goose.update(window)
+    goose.update(window, ground.ground_hitbox)
     ground.update(window)
     space.step(1 / 300.0)
     # space.debug_draw(draw_options)
